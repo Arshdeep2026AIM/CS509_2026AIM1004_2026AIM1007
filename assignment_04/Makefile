@@ -1,11 +1,10 @@
 # Compiler settings
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++14
+CXXFLAGS = -Wall -Wextra -std=c++14 -O3
 
 TARGET = driver_app
 
-# List of source files
-SRCS = driver/driver.cpp src/fastMap.cpp ../utility/testing_utils.cpp ../utility/csr.cpp
+SRCS = driver/driver.cpp src/fastMap.cpp src/kmeans.cpp ../utility/testing_utils.cpp ../utility/csr.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
