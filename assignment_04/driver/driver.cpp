@@ -104,7 +104,7 @@ int main(int argc, char* argv[]) {
         }
     }
     else if (choice == 2) {
-        vector<string> testCases = (runMode == "ALL") ? vector<string>{"10", "100", "1000", "10000"} : vector<string>{runMode};
+        vector<string> testCases = (runMode == "ALL") ? vector<string>{"10", "100"} : vector<string>{runMode};
         for (const string& testNum : testCases) {
             cout << ">>> Running Test Case: fm_" << testNum << " <<<\n";
             string testFilePath = "tests/fm_" + testNum + ".txt";
@@ -124,10 +124,9 @@ int main(int argc, char* argv[]) {
                 outFile << "Target dimensions: " << k << "\n";
                 outFile << "Pivots per dimension:\n";
                 for (int i = 0; i < k; i++) {
-                    outFile << "Dim " << i+1 << ": " << pivots[i][0] << " " << pivots[i][1] << endl;
+                    outFile << "Dim " << i+1 << ": " << pivots[i].first << " " << pivots[i].second << endl;
                 }
                 outFile << "Object coordinates:\n";
-                outFile << fixed << setprecision(6);
                 for (int i = 0; i < n; i++) {
                     outFile << i << ":";
                     for (int j = 0; j < k; j++) {

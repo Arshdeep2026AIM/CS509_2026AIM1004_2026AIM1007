@@ -351,7 +351,7 @@ d(N-1,0) d(N-1,1) ... d(N-1,N-1)
 ---
 
 ### File Structure
-* `kmeans.h` / `kmeans.cpp`: K-Means clustering algorithm implementation (assignment, centroid updates, WCSS calculation).
+* `kmeans.cpp`: K-Means clustering algorithm implementation (assignment, centroid updates, WCSS calculation).
 * `fastMap.cpp`: FastMap heuristic embedding routine (pivot selection, law of cosines projection, distance deflation).
 * `data.h`: Header file for both alogirthms
 * `testing_utils.h` / `testing_utils.cpp`: Execution timing utilities using `std::chrono::high_resolution_clock`.
@@ -361,21 +361,23 @@ d(N-1,0) d(N-1,1) ... d(N-1,N-1)
 
 ### Test Cases and Result Tables
 
+
 #### 1. K-Means Clustering
 | File | N | D | K | Max Iter. | Actual Iter. | WCSS | Time | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `km_01.txt` | 100 | 2 | 3 | 300 | | | | |
-| `km_02.txt` | 1,000 | 2 | 5 | 300 | | | | |
-| `km_03.txt` | 10,000 | 5 | 8 | 300 | | | | |
-| `km_04.txt` | 100,000 | 5 | 10 | 300 | | | | |
+| `km_01.txt` | 100 | 2 | 3 | 300 | 6 | 57552.14 | 0.01 ms | PASSED |
+| `km_02.txt` | 1,000 | 2 | 5 | 300 | 14 | 348745.61 | 0.15 ms | PASSED |
+| `km_03.txt` | 10,000 | 5 | 8 | 300 | 60 | 21182086.61 | 22.2 ms | PASSED |
+| `km_04.txt` | 100,000 | 5 | 10 | 300 | 237 | 189543037.23 | 968.55 ms | PASSED |
 
 #### 2. FastMap
-| File | N | Target k | Pivots (per dim) | Avg. Distance Error | Time | Status |
+| File | N | Target k | Pivots (per dim) | Time | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| `fm_01.txt` | 10 | 2 | | | | |
-| `fm_02.txt` | 100 | 3 | | | | |
-| `fm_03.txt` | 1,000 | 3 | | | | |
-| `fm_04.txt` | 10,000 | 3 | | | | |
+| `fm_01.txt` | 10 | 2 | 2 | 0 ms | PASSED |
+| `fm_02.txt` | 100 | 3 | 2 | 0.4 ms | PASSED |
+| `fm_03.txt` | 1,000 | 3 | 2 | 30.1652 ms | PASSED |
+| `fm_04.txt` | 10,000 | 3 | 2 | 2949.55 ms | PASSED |
+
 
 ---
 

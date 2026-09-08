@@ -7,7 +7,7 @@
 using namespace std;
 
 vector<vector<double>> result;
-vector<vector<int>> pivots;
+vector<pair<int, int>> pivots;
 
 void readFastMap(string inputFile, vector<vector<double>>& dist, int& n, int& k) {
     ifstream File(inputFile);
