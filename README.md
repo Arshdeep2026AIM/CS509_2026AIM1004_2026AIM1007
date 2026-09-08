@@ -361,7 +361,6 @@ d(N-1,0) d(N-1,1) ... d(N-1,N-1)
 
 ### Test Cases and Result Tables
 
-
 #### 1. K-Means Clustering
 | File | N | D | K | Max Iter. | Actual Iter. | WCSS | Time | Status |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -372,12 +371,11 @@ d(N-1,0) d(N-1,1) ... d(N-1,N-1)
 
 #### 2. FastMap
 | File | N | Target k | Pivots (per dim) | Time | Status |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | `fm_01.txt` | 10 | 2 | 2 | 0 ms | PASSED |
 | `fm_02.txt` | 100 | 3 | 2 | 0.4 ms | PASSED |
 | `fm_03.txt` | 1,000 | 3 | 2 | 30.1652 ms | PASSED |
 | `fm_04.txt` | 10,000 | 3 | 2 | 2949.55 ms | PASSED |
-
 
 ---
 
