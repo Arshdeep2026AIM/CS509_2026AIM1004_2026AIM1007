@@ -33,6 +33,7 @@ void handleAssignment(int assignmentNum, const string& folderName, const string&
         if (assignmentNum == 1) maxChoice = 3;
         else if (assignmentNum == 2) maxChoice = 4;
         else if (assignmentNum == 3) maxChoice = 2;
+        else if (assignmentNum == 4) maxChoice = 2;
 
         if (algoChoice > 0 && algoChoice <= maxChoice) {
             int modeChoice;
@@ -66,6 +67,7 @@ int main() {
         cout << "1. Assignment 01 (BFS, DFS, SSSP)\n";
         cout << "2. Assignment 02 (TC-Unopt, TC-Opt, BC, CC)\n";
         cout << "3. Assignment 03 (Gradient Descent, Maxflow-Mincut)\n";
+        cout << "4. Assignment 04 (K-Means & FastMap)\n";
         cout << "0. Exit\n";
         cout << "Enter choice: ";
         cin >> mainChoice;
@@ -82,6 +84,10 @@ int main() {
             case 3:
                 handleAssignment(3, "assignment_03", "Assignment 03 Menu", 
                                  "1. Gradient Descent\n2. Maxflow-Mincut\n");
+                break;
+            case 4:
+                handleAssignment(4, "assignment_04", "Assignment 04 Menu", 
+                                 "1. K-Means Clustering\n2. FastMap\n");
                 break;
             case 0:
                 cout << "\nExiting wrapper. Goodbye!\n";
