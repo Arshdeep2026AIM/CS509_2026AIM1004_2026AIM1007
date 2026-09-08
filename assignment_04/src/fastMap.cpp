@@ -23,10 +23,12 @@ void readFastMap(string inputFile, vector<vector<double>>& dist, int& n, int& k)
         }
         dist.push_back(row);
     }
+    result.clear();
+    pivots.clear();
     result.assign(n, vector<double>(k, 0.0));
 }
 
-double getDistance(int pointA, int pointB, int currDim, vector<vector<double>>& distSq) {
+double getDistance(int pointA, int pointB, int& currDim, vector<vector<double>>& distSq) {
     double diff = distSq[pointA][pointB];
     for (int i = 0; i < currDim; i++) {
         double distance = result[pointA][i] - result[pointB][i];
